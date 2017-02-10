@@ -1,0 +1,116 @@
+#contact .contact-card-wrapper {
+    background-color: $primary-color !important;
+    color: $dark-color;
+    margin-bottom: 8px;
+    padding: 4px;
+
+    h1 {
+        padding-top: 16px;
+        font-weight: 100;
+        text-align: center;
+        color: $white;
+    }
+
+    .contact-card {
+        position: relative;
+        @include block($white);
+        display: block;
+        width:  100%;
+        margin: 8px auto;
+
+        .overlay {
+            width: 100px;
+            margin: 0 auto;
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+
+    img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    span {
+        display: block;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    
+}
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 1;
+}
+
+.overlay:hover .mask {
+    opacity: 1;
+}
+
+.mask {
+    opacity: 0.3;
+    transition: all .4s ease-in-out;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+}
+
+.facebook-img, .instagram-img, .pinterest-img, .tumblr-img {
+    .mask {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+.facebook-img .mask {
+    background: url("../res/fbicon.png");
+}
+
+.instagram-img .mask {
+    background: url("../res/igicon.png");
+}
+
+.pinterest-img .mask {
+    background: url("../res/picon.png");
+}
+
+.tumblr-img .mask {
+    background: url("../res/ticon.png");
+}
+
+#contact .contact-side-content {
+    position: relative;
+    height: 150px;
+
+    p {
+        text-align: center;
+        vertical-align: middle;
+        font-weight: 300;
+        font-size: 1em;
+    }
+
+    img {
+        width: 40%;
+        @include absolute-center;
+        transform: translate(-50%, -25%);
+    }
+}

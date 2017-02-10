@@ -1,0 +1,238 @@
+section.aboutme {
+	position: relative;
+	overflow: hidden;
+	min-height: 600px;
+	z-index: 2000;
+	background-color: rgba(0,0,0, 0.1);
+	padding: 16px;
+	
+	.top-bg {
+	    z-index: -1;
+	    position: relative;
+	    top: 0;
+	    left: 1px;
+	    display: block;
+	    background-image: url("../res/top.jpg");
+	    background-repeat: repeat-y;
+	    width: 99vw;
+	    height: auto;
+	    -webkit-filter: blur(6px);
+	    -moz-filter: blur(6px);
+	    -o-filter: blur(6px);
+	    -ms-filter: blur(6px);
+	    filter: blur(6px);
+	}
+
+	div.container {
+		position: relative;
+		background: $white;
+		border-radius: 32px;
+	}
+
+	div.odd, div.even {
+		margin: 16px auto;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	h1 {
+		margin-bottom: 32px;
+	}
+
+	div.col-sm-3 {
+		height: auto;
+		max-height: 250px;
+		overflow: hidden;
+	}
+}
+
+section.ref-header {
+	background-color: $light-color;
+	color: $white;
+
+	img {
+		width: 150px;
+		hegiht: auto;
+
+		&:hover {
+			cursor:pointer;	
+		}
+	}
+
+	h1 {
+		margin: 16px auto;
+		text-align: center;
+		font-weight: 100;
+	}
+
+	span {
+		margin-top: 8px;
+		display: block;
+		text-align: center;
+		font-size: 1.5em;
+	}
+}
+
+@media(max-width: 425px) {
+	div.col-sm-4 {
+		position: relative;
+		height: 250px;
+
+		div {
+			@include block($light-color);
+		}
+
+		&:nth-child(1) {
+			transform: translate(0, 110%);
+		}
+		&:nth-child(2) {
+			transform: translate(0, -100%);
+		}
+
+	}
+}
+
+@media(min-width: 768px) {
+	section.aboutme {
+		position: relative;
+		overflow: hidden;
+		min-height: 600px;
+		height: 600px;
+		z-index: 2000;
+		
+		.top-bg {
+		    z-index: -1;
+		    position: relative;
+		    top: 0;
+		    left: 1px;
+		    display: block;
+		    background-image: url("../res/top.jpg");
+		    width: 99vw;
+		    height: auto;
+		    -webkit-filter: blur(6px);
+		    -moz-filter: blur(6px);
+		    -o-filter: blur(6px);
+		    -ms-filter: blur(6px);
+		    filter: blur(6px);
+		}
+
+		div.container {
+			position: absolute;
+			background: $white;
+			border-radius: 32px;
+		}
+
+		div.odd {
+			top: 20px;
+			right: 0;
+
+			img {
+				float: right;
+			}
+		}
+
+		div.even {
+			top: 300px;
+			left: 0;
+
+			img {
+				float: left;
+			}
+		}
+
+		h1 {
+			margin-bottom: 32px;
+		}
+
+		div.col-sm-3 {
+			height: auto;
+			max-height: 250px;
+			overflow: hidden;
+		}
+	}
+
+	section.ref-header {
+		background-color: $light-color;
+		color: $white;
+
+		img {
+			width: 150px;
+			hegiht: auto;
+
+			&:hover {
+				cursor:pointer;	
+			}
+		}
+
+		h1 {
+			margin: 16px auto;
+			text-align: center;
+			font-weight: 100;
+		}
+
+		div.col-sm-4 {
+			height: 350px;
+
+			&:first-child img, &:last-child img {
+				margin-top: 64px;
+			}
+
+			div {
+				@include block($light-color);
+			}
+		}
+
+		span {
+			margin-top: 8px;
+			display: block;
+			text-align: center;
+			font-size: 1.5em;
+		}
+	}
+
+}
+
+section.ref-content {
+	position: relative;
+	z-index: 2000;
+
+	h1 {
+		text-align: center;
+		background-color: $light-color;
+		padding: 8px;
+		margin: 16px 0;
+		color: white;
+		font-weight: 100;
+	}
+
+	#portrek, #sajat-otletek, #tetovalas-mintak {
+		margin: 8px auto;
+		border-radius: 16px;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	#p-more, #s-more, #t-more {
+		margin: 16px 0;
+	}
+}
+
+section.foot-top {
+	position: relative;
+	height: 48px;
+	color: $white !important;
+	background-color: $light-color;
+	
+	span {
+		color: white;
+		@include absolute-center;
+	}
+}
+
+section.slides {
+	background-color: $light-color;
+	color: $white;
+}

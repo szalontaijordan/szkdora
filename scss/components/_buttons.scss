@@ -1,0 +1,24 @@
+.btn-material {
+	padding: 16px;
+	background-color: $light-color;
+	border-radius: 0;
+	color: $white;
+	border: none;
+
+    &:active {
+    	cursor: pointer;
+		background-color: $dark-color !important;
+		border-radius: 0;
+		border: none;
+		color: $white !important;
+	}
+
+	&:hover {
+		background-color: $dark-color !important;
+		color: $white !important;
+	}
+}
+
+.btn-material:active {
+	box-shadow: none;
+}

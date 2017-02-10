@@ -1,0 +1,62 @@
+header.jumbotron {
+	background-color: $light-color;
+	opacity: 1;
+	max-height: 568px;
+	padding-top: 75px;
+	height: auto;
+	margin: 0 auto;
+	z-index: 2001;
+
+	div.row > div {
+		position: relative;
+		min-height: 90px;
+		height: 100px;
+		
+		img {
+			@include absolute-center;
+			width: 50%;
+			border-radius: 50%;
+		}
+
+		.top-header {
+			@include absolute-center;
+			text-align: center;
+
+			img {
+				transform: translate(0, -50%);
+				position: static;
+				display: inline-block;
+				width: 48px;
+				margin: 0 auto;
+			}
+
+			h1 {
+				font-weight: 100;
+				color: $white;
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1444px) {
+	header.jumbotron {
+		height: 256px;
+		padding-top: 100px;
+	}
+}
+
+@media(max-width: 425px) {
+	header.jumbotron {
+		img {
+			width: 20% !important;
+			border-radius: 50%;
+		}
+
+		h1 {
+			font-weight: 100;
+			color: $white;
+			text-align: center;
+		}
+	}
+}

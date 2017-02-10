@@ -1,0 +1,117 @@
+body {
+   font-family: 'Roboto', sans-serif;
+   position: relative;
+   font-weight: 300;
+}
+
+h1, h2, h3, h4, h5 {
+	margin-top: 0;
+}
+
+
+@media(min-width: 425px) {
+    .jumbotron h1 {
+        font-size: 3em !important;
+    }
+
+    footer {
+        h1 {
+            font-size: 2em !important; 
+        }
+    }
+    
+    input, textarea {
+        width: 92%;
+    }
+}
+
+
+@media(min-width: 768px) {
+    .jumbotron h1 {
+        font-size: 3em !important;
+    }
+
+    footer {
+        h1 {
+            font-size: 2em !important; 
+        }
+    }
+
+    input, textarea {
+        width: 86%;
+    }
+}
+
+@media(min-width: 1024px) {
+    .jumbotron h1 {
+        font-size: 4em !important;
+    }
+
+    h1 {
+        font-size: 2em !important;
+    }
+
+    input, textarea {
+        width: 90%;
+    }
+}
+
+@media(min-width: 1440px) {
+    h1,  {
+        font-size: 4em !important;
+    }
+
+    input, textarea {
+        width: 92%;
+    }
+}
+
+.shadow {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.no-padding     {padding: 0;}
+.thin-padding   {padding: 8px;}
+.light-padding  {padding: 16px;}
+.medium-padding {padding: 32px;}
+.strong-padding {padding: 64px;}
+
+.no-margin     {margin: 0;}
+.thin-margin   {margin: 8px;}
+.light-margin  {margin: 16px;}
+.medium-margin {margin: 32px;}
+.strong-margin {margin: 64px;}
+
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}

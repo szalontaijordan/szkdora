@@ -1,0 +1,9 @@
+$primary-color:   #8a2b3f;
+$dark-color:      darken($primary-color, 10%);
+$light-color:     lighten($primary-color, 10%);
+$white:           #fff;
+$base:            $dark-color;
+$width:           555px;
+$invalid:         lighten($primary-color, 33%);
+$cubic:           cubic-bezier(.64,.09,.08,1);
+

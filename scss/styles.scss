@@ -1,0 +1,43 @@
+/*------ROBOTO FONT------*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100);
+
+/*---------BASE----------*/
+@import 'base/_mixins.scss';
+@import 'base/_varaibles.scss';
+/* normalize */
+@import 'base/_normalize.scss';
+
+/*--------LAYOUT---------*/
+/* header */
+@import 'layout/_header.scss';
+
+/* nav */
+@import 'layout/_nav.scss';
+
+/* footer */
+@import 'layout/_footer.scss';
+
+/*------COMPONENTS-------*/
+/* sections */
+@import 'components/_sections.scss';
+
+/* hover-effect */
+@import 'components/_contact-card.scss';
+
+/* cards */
+@import 'components/_card.scss';
+
+/* carousel */
+@import 'components/_carousel.scss';
+
+/* image-viewer */
+@import 'components/_image-viewer.scss';
+
+/* buttons */
+@import 'components/_buttons.scss';
+
+/* side pattern */
+@import 'components/_side-pattern.scss';
+
+/* copyright */
+@import 'components/_copyright.scss';

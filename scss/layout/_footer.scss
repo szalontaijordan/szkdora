@@ -1,0 +1,153 @@
+footer {
+	position: relative;
+
+	.foot-bot {
+		background-color: $dark-color;
+		padding: 16px;
+		color: $white;
+		font-weight: 300;
+	}
+
+	.form-group {
+		margin-bottom: 4px;
+	}
+
+	div.col-sm-6 > div.row:first-child {
+		height: 508px;
+		width: auto;
+	}
+
+	form {
+		color: $primary-color;
+		background-color: $primary-color;
+		position: relative;
+		margin: 16px;
+		padding: 8px;
+
+		h1 {
+			font-weight: 100;
+			text-align: center;
+			color: $white;
+			margin-bottom: 20px;
+		}
+	}
+
+	input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	  transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out, visibility 0.3s ease-in-out;
+	}
+
+	input, textarea {
+	  padding: 4px;
+	  font-size: 1.2em;
+	  margin: 8px 16px 8px;
+	  display: block;
+	  border: none;
+	  padding: 15px 0 5px;
+	  border-bottom: solid 1px $base;
+	  background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $base 4%);
+	  background-position: -$width 0;
+	  background-size: $width 100%;
+	  background-repeat: no-repeat;
+	  transition: background 0.3s $cubic;
+	  resize: none;
+	  overflow: hidden; 
+
+	  &::-webkit-input-placeholder {
+	    color: $base;
+	  }  
+
+	  &:focus::-webkit-input-placeholder {
+	    color: $base;
+	  }  
+
+	  &:focus, &:valid {
+	    box-shadow: none;
+	    outline: none;
+	    background-position: 0 0;
+
+	    &::-webkit-input-placeholder {
+	      font-size: 0.5em;
+	      transform: translateY(-20px);
+	      visibility: visible !important;
+	      opacity: 1;
+	    }
+	  }  
+	}
+
+	input[type="email"] {
+	  background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $base 4%);
+	  background-position: -$width 0;
+	  background-repeat: no-repeat;
+	  transition: border-bottom 0.3s ease, background 0.3s ease;
+
+	  &~span.validation-text {
+	    position: absolute;
+	    visibility: hidden;
+	    font-family: 'roboto', sans-serif;
+	    font-size: 1em;
+	    width: 92%;
+	    margin-left: 25px;
+	    margin-top:-5px;
+	    color: white;
+	    transition: color 0.3s ease-in-out;
+	  }
+
+	  &:not([value=""]) {
+	    &::-webkit-input-placeholder {
+	      font-size: 0.8em;
+	      transform: translateY(-20px);
+	      visibility: visible !important;
+	      opacity: 1;
+	    }
+
+	    &:focus::-webkit-input-placeholder {
+	      color: $base;
+	    }
+
+	    &:focus:not(:valid)::-webkit-input-placeholder {
+	      color: $invalid;
+	    }
+	  }
+
+	  &:focus {
+	    background-position: 0 0;
+
+	    &:not(:valid):not([value=""]) {
+	      border-bottom: solid 1px $invalid;
+	      background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $invalid 4%);
+	    }
+	  }
+
+	  &:not(:focus):not(:valid):not([value=""]) {
+	  	border-bottom: solid 1px $invalid;
+	    background-position: 0 0 ;
+	    background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $invalid 4%);
+	    
+	    &::-webkit-input-placeholder {
+	      color: $invalid;
+	    }
+		&~span.validation-text {
+	      visibility: visible;
+	      color: $invalid;
+	    }
+	  }
+	}
+
+	.flex {
+	  display: flex;
+	  align-items: stretch;
+
+	  textarea {
+	  	padding-bottom: 150px;
+	  }
+	}
+
+	input, textarea {
+		background-color: $white !important;
+	}
+
+	span.glyphicon {
+		margin: 2px auto;
+		color: white;
+	}
+}

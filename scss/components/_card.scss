@@ -1,0 +1,94 @@
+.card {
+    position: relative;
+    background-color: $light-color;
+    border-radius: 2px;
+    display: block;
+    overflow: hidden;
+    width: 98%;
+    padding-top: 98%;
+    margin: 16px auto;
+    box-sizing: border-box;
+
+    img {
+        z-index: 2000;
+        height: 150%;
+        width: auto;
+        @include absolute-center;
+    }
+
+    span.card-cover-text {
+        font-size: 2.5em;
+        color: $white;
+        font-weight: 300;
+    }
+}
+
+.card::before, .card::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.card:hover {
+    cursor: pointer;
+
+    img {
+        transition: height .5s ease-in-out;
+    }
+
+    img:hover {
+        height: 160%; 
+    }    
+}
+
+.card-cover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 33%;
+    background-color: $dark-color;
+    opacity: 0.5;
+    z-index: 2001;
+    padding: 16px
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        position: relative;
+        background-color: $light-color;
+        border-radius: 2px;
+        display: inline-block;
+        overflow: hidden;
+        margin: 4px;
+        width: 48%;
+        padding-top: 48%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        position: relative;
+        background-color: $light-color;
+        border-radius: 2px;
+        display: inline-block;
+        overflow: hidden;
+        margin: 4px;
+        width: 32%;
+        height: auto;
+        padding-top: 32%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .card {
+        position: relative;
+        background-color: $light-color;
+        border-radius: 2px;
+        display: inline-block;
+        overflow: hidden;
+        margin: 4px;
+        width: 24%;
+        padding-top: 24%;
+    }
+}

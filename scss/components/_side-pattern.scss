@@ -1,0 +1,22 @@
+section.ref-content {
+    .bg-left, .bg-right {
+        position: absolute;
+        background-repeat: repeat-y;
+        background-size: 15vw auto;
+        z-index: -1;
+        height: 100%;
+        width: 50vw;
+    }
+
+    .bg-left {
+        left: 0;
+        background-image: url("../res/minta-bal.png");
+        background-position: left;
+    }
+
+    .bg-right {
+        right: 0;
+        background-image: url("../res/minta-jobb.png");
+        background-position: right;
+    }
+}
